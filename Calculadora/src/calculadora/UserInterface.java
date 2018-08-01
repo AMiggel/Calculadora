@@ -421,7 +421,7 @@ public class UserInterface extends javax.swing.JFrame {
                 resu = Double.parseDouble(this.num1) * Double.parseDouble(this.num2);
                 break;
             case "div":
-                resu = Double.parseDouble(this.num1) / Double.parseDouble(this.num2);
+                resu = operacion.dividir(Double.parseDouble(this.num1),Double.parseDouble(this.num2));
                 break;
         }
         this.num1 = String.valueOf(resu);

@@ -39,43 +39,48 @@
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="seno" max="32767" attributes="0"/>
                   </Group>
-                  <Component id="igual" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="cuatro" alignment="0" max="32767" attributes="0"/>
-                          <Component id="siete" alignment="0" max="32767" attributes="0"/>
-                          <Component id="punto" max="32767" attributes="0"/>
-                          <Component id="uno" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="igual" alignment="1" min="-2" pref="45" max="-2" attributes="0"/>
                           <Group type="102" attributes="0">
-                              <Component id="cero" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="clean" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="ocho" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="dos" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="cinco" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="siete" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="punto" max="32767" attributes="0"/>
+                                  <Component id="uno" min="-2" pref="25" max="-2" attributes="0"/>
+                                  <Component id="cuatro" alignment="0" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="tres" alignment="0" max="32767" attributes="0"/>
-                                  <Component id="nueve" alignment="0" pref="45" max="32767" attributes="0"/>
-                                  <Component id="seis" alignment="0" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Component id="cero" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="clean" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="ocho" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="dos" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="cinco" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="tres" alignment="0" max="32767" attributes="0"/>
+                                          <Component id="nueve" alignment="0" pref="45" max="32767" attributes="0"/>
+                                          <Component id="seis" alignment="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="suma" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="resta" alignment="0" pref="45" max="32767" attributes="0"/>
+                                      <Component id="por" alignment="0" max="32767" attributes="0"/>
+                                  </Group>
+                                  <Component id="dividir" min="-2" pref="45" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="suma" alignment="0" max="32767" attributes="0"/>
-                              <Component id="resta" alignment="0" pref="45" max="32767" attributes="0"/>
-                              <Component id="por" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="dividir" min="-2" pref="45" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -93,14 +98,15 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="103" groupAlignment="1" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="uno" min="-2" pref="23" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cuatro" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="siete" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" attributes="0">
-                                  <Component id="dos" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="dos" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="uno" alignment="3" min="-2" pref="23" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Component id="cinco" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace max="-2" attributes="0"/>

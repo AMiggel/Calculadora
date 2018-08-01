@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package calculadora;
 
-/**
- *
- * @author Frank Bustamante
- */
+
 public class Operations {
+    
+    public double suma(double numero_1,double numero_2){
+        return numero_1 + numero_2;
+    }
     
 }

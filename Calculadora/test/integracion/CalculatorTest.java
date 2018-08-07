@@ -2,19 +2,26 @@ package integracion;
 
 import static org.junit.Assert.*;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import calculadora.Operations;
 
 public class CalculatorTest {
+	
+	Operations operacion;
 
+	private static final double numero_1 = 7;
+	private static final double numero_2 = 2;
+	
+	@Before
+	public void setUp() throws Exception {
+		operacion = new Operations();
+	}
+	
 	@Test
 	public void sumaTest() {
-		 Operations operacion = new Operations();
-
         //arrange
-		 double numero_1 = 7;
-	     double numero_2 = 2;
          double numSuma = operacion.suma(numero_1, numero_2);
          double numResta = operacion.resta(numero_1, numero_2);
         
@@ -27,11 +34,7 @@ public class CalculatorTest {
 	
 	@Test
 	public void restaTest() {
-		 Operations operacion = new Operations();
-
         //arrange
-		 double numero_1 = 7;
-	     double numero_2 = 2;
          double numSuma = operacion.suma(numero_1, numero_2);
          double numResta = operacion.resta(numero_1, numero_2);
         
@@ -41,5 +44,23 @@ public class CalculatorTest {
         //assert
         assertEquals(4.0,resultado,0.1);
 	}
+	
+	@Test
+	public void divisionTest() {
+        //arrange
+         double numSuma = operacion.suma(numero_1, numero_2);
+         double numResta = operacion.resta(numero_1, numero_2);
+        
+        //act
+        double resultado = operacion.dividir(numSuma, numResta);
+        
+        //assert
+        assertEquals(1.8,resultado,0.1);
+	}
 
+
+	@Test
+	public void multiplicacionTest() {
+     
+	}
 }

@@ -1,4 +1,4 @@
-package Operations;
+package integracion;
 
 import static org.junit.Assert.*;
 
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import calculadora.Operations;
 
-public class Operaciones {
+public class CalculatorTest {
 
 	@Test
 	public void sumaTest() {

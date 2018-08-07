@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import calculadora.Operations;
 
-public class CalculatorTest {
+public class CalculatorBasicTest {
 	
 	Operations operacion;
 

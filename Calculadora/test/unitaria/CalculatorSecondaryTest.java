@@ -36,4 +36,15 @@ public class CalculatorSecondaryTest {
 		assertEquals(2.08, result, 0.1);
 	}
 
+        
+	@Test
+	public void senoTest() {
+        
+            // act
+            double result = operation.seno(numero_1);
+            
+            //assert
+            assertEquals(0.41, result, 0.1);
+        }        
+        
 }

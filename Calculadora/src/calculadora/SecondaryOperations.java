@@ -17,4 +17,8 @@ public class SecondaryOperations {
         public double tan(double num){
             return Math.tan(num);
         }
+        
+        public double sin(double numero){
+            return Math.sin(numero);
+        }
 }

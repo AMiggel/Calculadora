@@ -47,8 +47,8 @@
                               <Group type="103" groupAlignment="1" max="-2" attributes="0">
                                   <Component id="siete" alignment="0" max="32767" attributes="0"/>
                                   <Component id="punto" max="32767" attributes="0"/>
-                                  <Component id="uno" min="-2" pref="25" max="-2" attributes="0"/>
                                   <Component id="cuatro" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="uno" alignment="1" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" attributes="0">
@@ -307,14 +307,18 @@
     <Component class="javax.swing.JButton" name="raiz">
       <Properties>
         <Property name="text" type="java.lang.String" value="raiz"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="raizActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="seno">
       <Properties>
         <Property name="text" type="java.lang.String" value="seno"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="senoActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="coseno">
       <Properties>
@@ -327,14 +331,15 @@
     <Component class="javax.swing.JButton" name="tangente">
       <Properties>
         <Property name="text" type="java.lang.String" value="tang"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="log">
       <Properties>
         <Property name="text" type="java.lang.String" value="log"/>
-        <Property name="enabled" type="boolean" value="false"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="logActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="igual">
       <Properties>

@@ -162,10 +162,18 @@ public class UserInterface extends javax.swing.JFrame {
         });
 
         raiz.setText("raiz");
-        raiz.setEnabled(false);
+        raiz.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                raizActionPerformed(evt);
+            }
+        });
 
         seno.setText("seno");
-        seno.setEnabled(false);
+        seno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                senoActionPerformed(evt);
+            }
+        });
 
         coseno.setText("coseno");
         coseno.addActionListener(new java.awt.event.ActionListener() {
@@ -175,10 +183,13 @@ public class UserInterface extends javax.swing.JFrame {
         });
 
         tangente.setText("tang");
-        tangente.setEnabled(false);
 
         log.setText("log");
-        log.setEnabled(false);
+        log.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logActionPerformed(evt);
+            }
+        });
 
         igual.setText("=");
         igual.addActionListener(new java.awt.event.ActionListener() {
@@ -213,8 +224,8 @@ public class UserInterface extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(siete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(punto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(uno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cuatro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(cuatro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(uno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -316,11 +327,9 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_raizActionPerformed
 
     private void cosenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosenoActionPerformed
-                if (!this.operation) {
-			this.op = "cos";
-			this.print.setText(this.print.getText() + "cos");
-			this.operation = true;
-		}
+               String r = String.valueOf(this.operation2.coseno(Double.parseDouble(num1)));
+        this.print.setText(r);
+        num1 = r;
        
     }//GEN-LAST:event_cosenoActionPerformed
 
@@ -331,7 +340,14 @@ public class UserInterface extends javax.swing.JFrame {
         num1 = r;
     }//GEN-LAST:event_logActionPerformed
 
-	private void unoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_unoActionPerformed
+    private void senoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senoActionPerformed
+        // TODO add your handling code here:
+          String r = String.valueOf(this.operation2.seno(Double.parseDouble(num1)));
+        this.print.setText(r);
+        num1 = r;
+    }//GEN-LAST:event_senoActionPerformed
+
+private void unoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_unoActionPerformed
 		this.print.setText(this.print.getText() + "1");
 		if (!this.operation) {
 			this.num1 += "1";
@@ -436,19 +452,24 @@ public class UserInterface extends javax.swing.JFrame {
 
 	private void puntoActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_puntoActionPerformed
 
-		if (!this.print.getText().contains(".") & !this.print.getText().equals("")) {
+		if (!this.print.getText().equals("")) {
 			this.print.setText(this.print.getText() + ".");
 			if (!this.operation) {
-				this.num1 += ".";
+                            if (!this.num1.contains(".")) {
+                                this.num1 += ".";
+                            }
+				
 			} else {
-				this.num2 += ".";
+				if (!this.num2.contains(".")) {
+                                this.num2 += ".";
+                            }
 			}
 		}
 
 	}// GEN-LAST:event_puntoActionPerformed
 
 	private void cleanActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cleanActionPerformed
-
+                this.operation = false;
 		this.print.setText("");
 		this.num1 = this.num2 = "";
 	}// GEN-LAST:event_cleanActionPerformed
@@ -466,10 +487,11 @@ public class UserInterface extends javax.swing.JFrame {
 	private void igualActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_igualActionPerformed
 
 		double resu = 0;
+                if(!num1.equals("") & !num2.equals("")){
 		switch (this.op) {
 		case "sum":
 			if (!this.num2.equals("") && !this.num1.equals("") && !this.op.equals("")) {
-
+                            System.out.println(num1 +" "+ num2);
 				resu = operacion.suma(Double.parseDouble(this.num1), Double.parseDouble(this.num2));
 			}
 			break;
@@ -486,7 +508,7 @@ public class UserInterface extends javax.swing.JFrame {
 		resu = operation2.coseno(Double.parseDouble(this.num1));
 		break;
 		}
-                
+                }
 		this.num1 = String.valueOf(resu);
 		this.num2 = "";
 		this.operation = false;

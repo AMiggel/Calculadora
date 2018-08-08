@@ -21,4 +21,7 @@ public class SecondaryOperations {
 	public double seno(double numero) {
 		return Math.sin(numero);
 	}
+        public double coseno(double numero) {
+		return Math.cos(numero);
+	}
 }

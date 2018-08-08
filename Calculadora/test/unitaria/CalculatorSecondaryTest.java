@@ -65,5 +65,13 @@ public class CalculatorSecondaryTest {
 		// assert
 		assertEquals(0.41, result, 0.1);
 	}
+        @Test
+	public void cosenoTest() {
+		// act
+		double result = operation.coseno(numero_1);
+
+		// assert
+		assertEquals(-0.911, result, 0.1);
+	}
 
 }

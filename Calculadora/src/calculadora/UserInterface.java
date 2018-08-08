@@ -162,13 +162,10 @@ public class UserInterface extends javax.swing.JFrame {
         });
 
         raiz.setText("raiz");
-        raiz.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                raizActionPerformed(evt);
-            }
-        });
+        raiz.setEnabled(false);
 
         seno.setText("seno");
+        seno.setEnabled(false);
 
         coseno.setText("coseno");
         coseno.addActionListener(new java.awt.event.ActionListener() {
@@ -178,18 +175,10 @@ public class UserInterface extends javax.swing.JFrame {
         });
 
         tangente.setText("tang");
-        tangente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tangenteActionPerformed(evt);
-            }
-        });
+        tangente.setEnabled(false);
 
         log.setText("log");
-        log.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                logActionPerformed(evt);
-            }
-        });
+        log.setEnabled(false);
 
         igual.setText("=");
         igual.addActionListener(new java.awt.event.ActionListener() {
@@ -224,8 +213,8 @@ public class UserInterface extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(siete, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(punto, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(cuatro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(uno, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addComponent(uno, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(cuatro, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
@@ -327,7 +316,11 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_raizActionPerformed
 
     private void cosenoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosenoActionPerformed
-        // TODO add your handling code here:
+                if (!this.operation) {
+			this.op = "cos";
+			this.print.setText(this.print.getText() + "cos");
+			this.operation = true;
+		}
        
     }//GEN-LAST:event_cosenoActionPerformed
 
@@ -489,7 +482,11 @@ public class UserInterface extends javax.swing.JFrame {
 		case "div":
 			resu = operacion.dividir(Double.parseDouble(this.num1), Double.parseDouble(this.num2));
 			break;
+                case "cos":
+		resu = operation2.coseno(Double.parseDouble(this.num1));
+		break;
 		}
+                
 		this.num1 = String.valueOf(resu);
 		this.num2 = "";
 		this.operation = false;

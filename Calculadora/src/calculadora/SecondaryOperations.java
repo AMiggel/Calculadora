@@ -9,4 +9,8 @@ public class SecondaryOperations {
 	public double raizN(double numero_1,double indice) {
 		return Math.pow(numero_1, 1/indice);
 	}
+	
+	public double Log(double numero_1) {
+		return Math.log(numero_1);
+	}
 }

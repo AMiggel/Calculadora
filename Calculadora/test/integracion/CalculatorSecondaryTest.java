@@ -5,7 +5,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-import calculadora.Operations;
 import calculadora.SecondaryOperations;
 
 public class CalculatorSecondaryTest {
@@ -68,6 +67,19 @@ public class CalculatorSecondaryTest {
 		
 		// assert
 		assertEquals(-0.89, result, 0.1);
+	}
+	
+	@Test
+	public void cosTest() {
+		 //arrange
+        double numTan = operation.tan(numero_1);
+
+        // act
+		double numLogN = operation.Log(numTan);
+		double result = Math.round(numLogN * 100d) / 100d;
+
+		// assert
+		assertEquals(0.0, result, 0.1);
 	}
 
 }

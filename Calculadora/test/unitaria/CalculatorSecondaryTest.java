@@ -32,6 +32,7 @@ public class CalculatorSecondaryTest {
 		// act
 		double number = operation.raizN(numero_1, indice);
 		double result = Math.round(number * 100d) / 100d;
+		
 		// assert
 		assertEquals(2.08, result, 0.1);
 	}
@@ -58,7 +59,6 @@ public class CalculatorSecondaryTest {
 
 	@Test
 	public void senoTest() {
-
 		// act
 		double result = operation.seno(numero_1);
 

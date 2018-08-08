@@ -13,4 +13,8 @@ public class SecondaryOperations {
 	public double Log(double numero_1) {
 		return Math.log(numero_1);
 	}
+        
+        public double tan(double num){
+            return Math.tan(num);
+        }
 }

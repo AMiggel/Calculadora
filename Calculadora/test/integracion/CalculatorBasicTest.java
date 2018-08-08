@@ -26,10 +26,10 @@ public class CalculatorBasicTest {
          double numResta = operacion.resta(numero_1, numero_2);
         
         //act
-        double resultado = operacion.suma(numSuma, numResta);
+        double result = operacion.suma(numSuma, numResta);
         
         //assert
-        assertEquals(14.0,resultado,0.1);
+        assertEquals(14.0,result,0.1);
 	}
 	
 	@Test
@@ -39,10 +39,10 @@ public class CalculatorBasicTest {
          double numResta = operacion.resta(numero_1, numero_2);
         
         //act
-        double resultado = operacion.resta(numSuma, numResta);
+        double result = operacion.resta(numSuma, numResta);
         
         //assert
-        assertEquals(4.0,resultado,0.1);
+        assertEquals(4.0,result,0.1);
 	}
 	
 	@Test
@@ -52,15 +52,23 @@ public class CalculatorBasicTest {
          double numResta = operacion.resta(numero_1, numero_2);
         
         //act
-        double resultado = operacion.dividir(numSuma, numResta);
+        double result = operacion.dividir(numSuma, numResta);
         
         //assert
-        assertEquals(1.8,resultado,0.1);
+        assertEquals(1.8,result,0.1);
 	}
 
 
 	@Test
 	public void multiplicacionTest() {
-     
+		 //arrange
+        double numSuma = operacion.suma(numero_1, numero_2);
+        double numResta = operacion.dividir(numero_1, numero_2);
+       
+       //act
+       double result = operacion.Multiplicar(numSuma, numResta);
+       
+       //assert
+       assertEquals(31.5,result,0.1);
 	}
 }

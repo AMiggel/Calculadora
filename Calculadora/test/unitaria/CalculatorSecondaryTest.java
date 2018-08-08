@@ -26,25 +26,44 @@ public class CalculatorSecondaryTest {
 		// assert
 		assertEquals(3.0, result, 0.1);
 	}
-	
+
 	@Test
 	public void raizN() {
 		// act
-		double number = operation.raizN(numero_1,indice);
+		double number = operation.raizN(numero_1, indice);
 		double result = Math.round(number * 100d) / 100d;
 		// assert
 		assertEquals(2.08, result, 0.1);
 	}
 
-        
+	@Test
+	public void logN() {
+		// act
+		double number = operation.Log(numero_1);
+		double result = Math.round(number * 100d) / 100d;
+
+		// assert
+		assertEquals(2.19, result, 0.1);
+	}
+
+	@Test
+	public void tan() {
+		// act
+		double number = operation.tan(numero_1);
+		double result = Math.round(number * 100d) / 100d;
+
+		// assert
+		assertEquals(-0.45, result, 0.1);
+	}
+
 	@Test
 	public void senoTest() {
-        
-            // act
-            double result = operation.seno(numero_1);
-            
-            //assert
-            assertEquals(0.41, result, 0.1);
-        }        
-        
+
+		// act
+		double result = operation.seno(numero_1);
+
+		// assert
+		assertEquals(0.41, result, 0.1);
+	}
+
 }

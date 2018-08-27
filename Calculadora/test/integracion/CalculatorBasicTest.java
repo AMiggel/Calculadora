@@ -25,6 +25,7 @@ public class CalculatorBasicTest {
          double numSuma = operacion.suma(numero_1, numero_2);
          double numResta = operacion.resta(numero_1, numero_2);
         
+         
         //act
         double result = operacion.suma(numSuma, numResta);
         
